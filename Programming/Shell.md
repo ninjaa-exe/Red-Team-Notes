@@ -48,7 +48,6 @@
 | netstat                                 | Exibe as portas abertas                            | netstat -nlpt                       |
 | find dir -type f -exec grep 'word' {} + | Procura alguma palavra em algum diretório          | find / -type f -exec grep 'word' {} |
 
----
 ## Operators
 
 | **Operator** | **Function**                                                                             |
@@ -60,7 +59,6 @@
 | &            | Permite executar dois comandos e separar suas saídas no terminal                         |
 | &&           | Usado para que dois comandos só sejam executados se o primeiro for executado com sucesso |
 
----
 ## Shortcuts
 
 | **Shortcut**   | **Function**               |
@@ -75,7 +73,6 @@
 | Ctrl + L       | Limpa o terminal           |
 | !!             | Repete o último comando    |
 
----
 ## Directories
 
 | **Directory** | **Function**                                                                          |
