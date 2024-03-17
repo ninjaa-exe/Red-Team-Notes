@@ -1,8 +1,7 @@
 ## Shell Commands
 
-|                                         |                                                    |                                     |
+| **Command**                             | **Function**                                       | **Exemple**                         |
 | --------------------------------------- | -------------------------------------------------- | ----------------------------------- |
-| Command                                 | Function                                           | Exemple                             |
 | ls                                      | Show the directories                               | ls /home/user                       |
 | cd                                      | Muda o diretório                                   | cd Documents/                       |
 | mkdir                                   | Cria um diretório                                  | mkdir pasta                         |
@@ -49,24 +48,23 @@
 | netstat                                 | Exibe as portas abertas                            | netstat -nlpt                       |
 | find dir -type f -exec grep 'word' {} + | Procura alguma palavra em algum diretório          | find / -type f -exec grep 'word' {} |
 
+---
 ## Operators
 
-|          |                                                                                          |
-| -------- | ---------------------------------------------------------------------------------------- |
-| Operator | Function                                                                                 |
-| >        | Redireciona a saída de um comando para outro comando ou arquivo                          |
-| >>       | Redireciona a saída e adiciona a mesma para um comando ou arquivo                        |
-| <        | Direciona a entrada de um arquivo para a saída de outro comando                          |
-| \|       | Envia a saída de um comando para entrada de outro                                        |
-| &        | Permite executar dois comandos e separar suas saídas no terminal                         |
-| &&       | Usado para que dois comandos só sejam executados se o primeiro for executado com sucesso |
+| **Operator** | **Function**                                                                             |
+| ------------ | ---------------------------------------------------------------------------------------- |
+| >            | Redireciona a saída de um comando para outro comando ou arquivo                          |
+| >>           | Redireciona a saída e adiciona a mesma para um comando ou arquivo                        |
+| <            | Direciona a entrada de um arquivo para a saída de outro comando                          |
+| \|           | Envia a saída de um comando para entrada de outro                                        |
+| &            | Permite executar dois comandos e separar suas saídas no terminal                         |
+| &&           | Usado para que dois comandos só sejam executados se o primeiro for executado com sucesso |
 
-
+---
 ## Shortcuts
 
-|                |                            |
-| -------------- | -------------------------- |
 | **Shortcut**   | **Function**               |
+| -------------- | -------------------------- |
 | Ctrl + Alt + T | Abre o terminal            |
 | Ctrl + C       | Cancela o comando atual    |
 | Ctrl + Z       | Pausa o comando atual      |
@@ -77,11 +75,11 @@
 | Ctrl + L       | Limpa o terminal           |
 | !!             | Repete o último comando    |
 
+---
 ## Directories
 
-|               |                                                                                       |
-| ------------- | ------------------------------------------------------------------------------------- |
 | **Directory** | **Function**                                                                          |
+| ------------- | ------------------------------------------------------------------------------------- |
 | /bin/         | Executáveis principais dos usuários                                                   |
 | /boot/        | Arquivos do sistema de boot                                                           |
 | /dev/         | Arquivos de dispositivos                                                              |
