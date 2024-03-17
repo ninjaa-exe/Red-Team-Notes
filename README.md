@@ -5,21 +5,23 @@ Updating every week :)
 
 ## Certifications
 
-![[Certifications.png]]
+![https://imgur.com/a/LHvmPU0](https://i.imgur.com/GGdxMqX.png)
 
+---
 ## CTF
 
-[https://hackthebox.com](https://hackthebox.com)
-[https://tryhackme.com](https://tryhackme.com)
-[https://hackaflag.com.br](https://hackaflag.com.br)
-[https://picoCTF.com.br](https://picoCTF.com.br)
-[https://ctf101.org](https://ctf101.org/)
-[https://247ctf.com](https://247ctf.com/)
-[https://attackdefense.com](https://attackdefense.com/)
-[https://ctflearn.com](https://ctflearn.com/)
-[https://cryptohack.org](https://cryptohack.org/)
-[https://www.hacksplaining.com](https://www.hacksplaining.com/)
+[https://hackthebox.com](https://hackthebox.com) <br>
+[https://tryhackme.com](https://tryhackme.com) <br>
+[https://hackaflag.com.br](https://hackaflag.com.br) <br>
+[https://picoCTF.com.br](https://picoCTF.com.br) <br>
+[https://ctf101.org](https://ctf101.org/) <br>
+[https://247ctf.com](https://247ctf.com/) <br>
+[https://attackdefense.com](https://attackdefense.com/) <br>
+[https://ctflearn.com](https://ctflearn.com/) <br>
+[https://cryptohack.org](https://cryptohack.org/) <br>
+[https://www.hacksplaining.com](https://www.hacksplaining.com/) 
 
+---
 ## Events
 
 - BHack
