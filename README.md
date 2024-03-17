@@ -30,6 +30,17 @@ Updating every week :)
 - Vale Sec Conference
 - H2HC
 - Campus Party
-- DEFCONConference
+- DEFCONConference <br>
+---
+## Methodologies
+### PTES
+[http://www.pentest-standard.org/index.php/Main_Page](http://www.pentest-standard.org/index.php/Main_Page)<br>
+### OWASP
+[https://owasp.org](https://owasp.org/) <br>
+### NIST
+[https://www.ibm.com/br-pt/topics/nist](https://www.ibm.com/br-pt/topics/nist) <br>
+### OSSTMM
+[https://www.isecom.org/OSSTMM.3.pdf](https://www.isecom.org/OSSTMM.3.pdf)<br>
+
 
 <p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
