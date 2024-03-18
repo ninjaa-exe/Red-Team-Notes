@@ -2,7 +2,7 @@
 `sudo apt-get install john`
 
 ## Cheat Sheet
-| Parameter           | Usage                | Exemple                              |
+| **Parameter**       | **Usage**            | **Exemple**                          |
 | ------------------- | -------------------- | ------------------------------------ |
 | --format=hashtype   | Choose the hash type | john --format=Raw-MD5 file.txt       |
 | --wordlist=wordlist | Choose the wordlist  | john --wordlist=rockyou.txt file.txt |
