@@ -2,7 +2,7 @@
 `sudo apt-get install crunch`
 
 ## How to use
-`crunch <number> <number> <parameters`
+`crunch <number> <number> <parameters>`
 
 - The first number is to define the minimum characters to be used
 - The second number is to define the maximum characters to be used
