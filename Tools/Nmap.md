@@ -1,9 +1,12 @@
 ## Installation
 `sudo apt-get install nmap`
 
+## How to use
+`nmap <parameters> <hosts>`
+
 ## Cheat Sheet
 
-| **Parameter**      | **Function**                           | **Exemple**                       |
+| **Parameter**      | **Usage**                              | **Exemple**                       |
 | ------------------ | -------------------------------------- | --------------------------------- |
 | -v                 | Verbose mode                           | nmap -v 192.168.1.10              |
 | -sV                | Shows the version                      | nmap -sV 192.168.1.10             |

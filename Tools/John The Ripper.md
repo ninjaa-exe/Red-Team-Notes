@@ -1,6 +1,9 @@
 ## Installation
 `sudo apt-get install john`
 
+## How to use
+`john <parameters> <file>`
+
 ## Cheat Sheet
 | **Parameter**       | **Usage**            | **Exemple**                          |
 | ------------------- | -------------------- | ------------------------------------ |

@@ -1,9 +1,12 @@
 ## Installation
 `sudo apt-get install hydra`
 
+## How to use
+`hydra <parameters> <service>`
+
 ## Cheat Sheet
 
-| **Parameter**   | **Function**                                        | **Exemple** |
+| **Parameter**   | **Usage**                                           | **Exemple** |
 | --------------- | --------------------------------------------------- | ----------- |
 | -v              | Verbose Mode                                        |             |
 | -l user         | Defines a user                                      |             |
