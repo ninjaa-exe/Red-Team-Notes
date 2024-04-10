@@ -1,0 +1,1 @@
+*Important: To use python in a nano file on Linux, you have to run `which python3` to find the path and then puts in the start of the file `!#path`* 
