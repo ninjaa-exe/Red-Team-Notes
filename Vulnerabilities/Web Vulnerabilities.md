@@ -29,7 +29,19 @@ Em casos que o redirecionamento é feito pelo parâmetro GET e seja passível de
 
 
 ## SQL Injection
-Para testar se existe um SQL Injection, um método é colocar o contrabarra ou uma aspa simples nos campos de login e senha 
+Para testar se existe um SQL Injection, um método é colocar o contrabarra ou uma aspa simples em campos de input
+
+### Error Based
+O Error Based, como o próprio nome diz, é baseado nos erro que retorna ao tentar fazer uma consulta no banco de dados em algum campo. Com ele, é possível injetar códigos SQL para descobrir informações sobre a tabela e o banco de dados.
+
+Exemplo:' union select 1,2,3... %23'
+Exemplo:' order by 1 or 2 or 3...'
+
+### Information Schema
+Através do information Schema, é possível obter a tabela com usuários e senhas do sistema e obter as informações contidas nela.
+
+Exemplo:' union select 1,2, table_name,4,5 from information_schema.tables %23
+Exemplo:' union select 1,2,concat(login,':',senha),4,5 from table %23
 ## Full Path Disclosure | Path Traversal | Directory Traversal
 O Path Traversal ou Directory Traversal é uma vulnerabilidade que ocorre quando é se é possível navegar entre os diretórios através de um parâmetro GET pela URL utilizando o "../" para listar todos os diretórios anteriores. Através dessa vulnerabilidade é possível encontrar arquivos sensíveis que se colocados na URL pode-se ver o conteúdo deles e encontrar informações confidenciais
 ## Local File Inclusion (LFI)
@@ -44,10 +56,10 @@ O Remote File Inclusion ocorre quando o servidor executa códigos remotamente de
 O HTML Injection ocorre quando se é possível injetar códigos HTML na página
 
 ## Cross Site Scripting (XSS)
-### Cross Site Scripting (XSS) - Refletido
+### Refletido
 Utilizando o mesmo conceito do HTML Injection, é possível também injetar códigos javascript no servidor para executar códigos no servidor. O XSS Refletido se dá por que o atacante cria uma URL maliciosa e precisa enviar para uma vítima, não é feito nenhuma gravação no banco de dados da página
 
-### Stored XSS
+### Stored 
 Quando o XSS é armazenado em algum lugar, por exemplo os comentários de feedback,  e com isso, é possível roubar os cookies de outros usuários enviando eles para o próprio servidor 
 
 ### XSStrike
