@@ -1,16 +1,25 @@
 # Checklist
 Directories
+
 Files
+
 Accepted Methods
+
 Source Code
 
 # Vetores de Ataque
 Campos de busca
+
 Campos de Login/Autenticação
+
 Campos de Registro/Cadastro
+
 Redirecionamentos
+
 Parâmetros GET e POST
+
 Download/Upload
+
 Posts
 
 # Vulnerabilidades
@@ -48,9 +57,11 @@ Para descobrir informações confidenciais do servidor através da lógica, é p
 
 Exemplo: ' or length(database()) = 7 #
 
-Exemplo: ' or ascii(substring(database(),1,1)) == number ascii for letter # 
+Exemplo: ' or ascii(substring(database(),1,1)) = ascii number for letter # 
 
 Exemplo: ' or database() = char(115,116,114,105,110,103) # 
+
+Exempo: ' or ascii(substring(select loing from column name limit 0,1),1,1)) = ascii number for letter #
 
 #### SQLi to RCE
 Com a injeção de comandos SQL, é possível escrever dados no servidor com o comando INTO OUTFILE e o caminho do diretório que você deseja salvar.
