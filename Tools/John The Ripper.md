@@ -7,8 +7,8 @@
 ## Cheat Sheet
 | **Parameter**       | **Usage**            | **Exemple**                          |
 | ------------------- | -------------------- | ------------------------------------ |
-| --format=hashtype   | Choose the hash type | john --format=Raw-MD5 file.txt       |
-| --wordlist=wordlist | Choose the wordlist  | john --wordlist=rockyou.txt file.txt |
+| --format=hashtype   | Set the hash type    | john --format=Raw-MD5 file.txt       |
+| --wordlist=wordlist | Set the wordlist     | john --wordlist=rockyou.txt file.txt |
 | --stdout > new file | Output to a new file | john --format=Raw-MD5 file.txt > md5 |
 
 ## Unshadow

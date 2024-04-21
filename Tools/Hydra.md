@@ -6,14 +6,14 @@
 
 ## Cheat Sheet
 
-| **Parameter**   | **Usage**                                           | **Exemple** |
-| --------------- | --------------------------------------------------- | ----------- |
-| -v              | Verbose Mode                                        |             |
-| -l user         | Defines a user                                      |             |
-| -L userlist     | Defines a user list                                 |             |
-| -p password     | Defines a password                                  |             |
-| -P passwordlist | Defines a password list                             |             |
-| -M hostslist    | Defines a host list                                 |             |
-| -s port         | Defines a port                                      |             |
-| -t number       |                                                     |             |
-| -W number       | Defines a time between each connection (needs -t 1) |             |
+| **Parameter**   | **Usage**                                       | **Exemple** |
+| --------------- | ----------------------------------------------- | ----------- |
+| -v              | Verbose Mode                                    |             |
+| -l user         | Set a user                                      |             |
+| -L userlist     | Set a user list                                 |             |
+| -p password     | Set a password                                  |             |
+| -P passwordlist | Set a password list                             |             |
+| -M hostslist    | Set a host list                                 |             |
+| -s port         | Set a port                                      |             |
+| -t number       |                                                 |             |
+| -W number       | Set a time between each connection (needs -t 1) |             |

@@ -134,9 +134,13 @@ URLs cannot contain spaces. URL encoding normally replaces a space with a plus (
 Site for more informations about: https://www.w3schools.com/tags/ref_urlencode.ASP
 
 
+## Problema de autorização
+
+
 ## Command Injection
 Essa vulnerabilidade se dá quando é possível injetar comandos do sistema operacional que não deveriam ser possíveis  através de algum campo .
 
 Exemplo de código vulnerável: whois <url> | grep "nserver"
 
 Exemplo de injeção de comando: whois ; id;# | grep "nserver"
+
