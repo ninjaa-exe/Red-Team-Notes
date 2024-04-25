@@ -1,4 +1,5 @@
-curl -v -X  host
+curl   host
 
 -X -> methods
--v verbose
+-v -> verbose
+--proxy -> proxy ip:port
