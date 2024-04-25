@@ -137,6 +137,10 @@ Site for more informations about: https://www.w3schools.com/tags/ref_urlencode.A
 ## Problema de autorização
 
 
+## PHP Wrappers
+
+
+Exemplo: data://text/plan;base64,php code
 ## Command Injection
 Essa vulnerabilidade se dá quando é possível injetar comandos do sistema operacional que não deveriam ser possíveis  através de algum campo .
 
