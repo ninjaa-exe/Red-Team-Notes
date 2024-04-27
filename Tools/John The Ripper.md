@@ -20,4 +20,5 @@ The unshadow tool in John the Ripper is used to merge the /etc/passwd and /etc/s
 ## How to discover the hash type
 `hashid file`
 `hashcat file`
+`hash-identifier`
 
