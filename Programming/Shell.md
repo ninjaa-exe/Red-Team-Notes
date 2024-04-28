@@ -48,6 +48,10 @@
 | netstat                                 | Exibe as portas abertas                            | netstat -nlpt                       |
 | find dir -type f -exec grep 'word' {} + | Procura alguma palavra em algum diretório          | find / -type f -exec grep 'word' {} |
 
+## Shell interativa x Shell não interativa
+A shell interativa tem a capacidade de interagir diretamente com os usuários e serviços (Exemplo: ftp ip ou passwd user). Já a shell não interativa, não consegue fazer essas conexões e quebra ao tentar utilizar comandos com essas funcionalidades, porém, é as vezes é possível fazer o upgrade de uma shell não interativa para uma interativa através de comandos (Exemplo: python -c import pty; pty.spawn("/bin/bash")').
+
+
 ## Operators
 
 | **Operator** | **Function**                                                                             |
