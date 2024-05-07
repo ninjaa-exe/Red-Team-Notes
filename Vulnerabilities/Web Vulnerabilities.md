@@ -23,8 +23,6 @@ Download/Upload
 Posts
 
 # Vulnerabilities
-## Directory and files Bruteforce
-Com diversas ferramentas, é possível encontrar diretórios e arquivos escondidos no host através de bruteforce
 
 ## Method Bypass
 É possível ver o conteúdo de uma página que é necessário acesso administrativo utilizando outro método para acessar. Exemplo: Fazer uma requisição POST via curl para a página específicada
@@ -131,16 +129,8 @@ URL encoding replaces unsafe ASCII characters with a "%" followed by two hexadec
 
 URLs cannot contain spaces. URL encoding normally replaces a space with a plus (+) sign or with %20.
 
-Site for more informations about: https://www.w3schools.com/tags/ref_urlencode.ASP
+More informations: https://www.w3schools.com/tags/ref_urlencode.ASP
 
-
-## Problema de autorização
-
-
-## PHP Wrappers
-
-
-Exemplo: data://text/plan;base64,php code
 ## Command Injection
 Essa vulnerabilidade se dá quando é possível injetar comandos do sistema operacional que não deveriam ser possíveis  através de algum campo .
 
