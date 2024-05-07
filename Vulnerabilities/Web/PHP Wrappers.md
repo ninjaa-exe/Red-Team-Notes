@@ -2,7 +2,7 @@ In PHP, "wrappers" are mechanisms that allow you to access different types of re
 
 For example, PHP provides wrappers for accessing local files (e.g., `file://`), remote resources (e.g., `http://` and `ftp://`), as well as other communication protocols. Using these wrappers, you can manipulate local files and remote resources in the same way, using functions such as `file_get_contents()` and `file_put_contents()`, for example.
 
-## Table of Contents
+# Table of Contents
 
 | Wrapper   | Function                        |
 | --------- | ------------------------------- |
@@ -18,6 +18,5 @@ For example, PHP provides wrappers for accessing local files (e.g., `file://`), 
 | rar://    | RAR                             |
 | ogg://    | Audio streams                   |
 | expect:// | Process Interaction Streams     |
-
 
 More informations: https://www.php.net/manual/en/wrappers.php
