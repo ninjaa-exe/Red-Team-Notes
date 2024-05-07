@@ -19,4 +19,5 @@ For example, PHP provides wrappers for accessing local files (e.g., `file://`), 
 | ogg://    | Audio streams                   |
 | expect:// | Process Interaction Streams     |
 
+
 More informations: https://www.php.net/manual/en/wrappers.php
