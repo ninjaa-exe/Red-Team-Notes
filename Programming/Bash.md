@@ -16,6 +16,7 @@ o “echo” exibe texto na tela
 o “read” serve para ler uma variável
 
 ### IF 
+
 `echo “Qual a cor do semáforo?”`
 
 `read cor`

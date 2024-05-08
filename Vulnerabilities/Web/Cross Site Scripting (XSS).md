@@ -8,7 +8,7 @@ When XSS is stored somewhere, for example feedback comments, it is possible to s
 O XSStrike é uma ferramenta para automatizar os testes de XSS em um host
 Para utilizar ele basta utilizar o comando `python3 xsstrike.py -u "host?parameter="` ou `python3 xsstrike.py -u "host" --params` para XSS Refletido e o comando `python3 xsstrike.py -u "host/" --path` para Self XSS
 
-Link para o download da ferramenta: https://github.com/s0md3v/XSStrike
+Link to download the tool: https://github.com/s0md3v/XSStrike
 
 XSStrike is a tool for automating XSS testing on a host To use it just use the command `python3 xsstrike.py -u "host?parameter="` or `python3 xsstrike.py -u "host" --params` for Reflected XSS and the command `python3 xsstrike.py -u "host/" --path` for Self XSS 
 

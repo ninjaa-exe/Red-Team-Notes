@@ -9,13 +9,13 @@
 
 ## Cheat Sheet
 
-| **Parameter**       | **Usage**                           | **Exemple** |
-| ------------------- | ----------------------------------- | ----------- |
-| -t                  | Sets the pattern                    |             |
-| %                   | Numbers 0-9                         |             |
-| ^                   | Special characters                  |             |
-| @                   | Lowercase characters                |             |
-| ,                   | Uppercase characters                |             |
-| -o new file         | Output to a file                    |             |
-| -f charset.lst type | Choose a type of charset to be used |             |
+| **Parameter**       | **Usage**                           |
+| ------------------- | ----------------------------------- |
+| -t                  | Sets the pattern                    |
+| %                   | Numbers 0-9                         |
+| ^                   | Special characters                  |
+| @                   | Lowercase characters                |
+| ,                   | Uppercase characters                |
+| -o new file         | Output to a file                    |
+| -f charset.lst type | Choose a type of charset to be used |
 
