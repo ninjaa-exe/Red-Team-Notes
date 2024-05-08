@@ -5,6 +5,7 @@
 `john <parameters> <file>`
 
 ## Cheat Sheet
+
 | **Parameter**       | **Usage**            |
 | ------------------- | -------------------- |
 | --format=hashtype   | Set the hash type    |

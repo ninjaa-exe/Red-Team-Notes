@@ -1,2 +1,3 @@
 
-How to use: samdump2 system file sam file
+## How to use
+`samdump2 <system file> <sam file>`
