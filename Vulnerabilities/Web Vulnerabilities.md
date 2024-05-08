@@ -141,10 +141,33 @@ Site for more informations about: https://www.w3schools.com/tags/ref_urlencode.A
 
 
 Exemplo: data://text/plan;base64,php code
+
+##  Bypass Upload
+
+### Case-sensitive
+
+Uma das possíveis formas de burlar o Upload de um arquivo caso a aplicação não aceite o upload de um arquivo naquela extensão, é verificar se é case-sensitive ou não
+
+Exemplo: shell.php → shell.phP or shell.php.pdf
+
+### .htaccess
+
+Uma outra forma de burlar o upload de arquivos, é adicionar um .htaccess para adicionar uma nova extensão para executar como o mesmo da aplicação
+
+Exemplo: .htaccess → AddType application/x-httpd-php .extension
+
+### Tipo de Conteúdo
+
+Algumas aplicações bloqueiam o upload de arquivos verificando não somente a extensão, mas também o tipo de arquivo, por isso, uma forma de burlar esse tipo de bloqueio, é mudar o tipo de um arquivo e colocar 2 extensões no arquivo para conseguir fazer o upload dele
+
+Exemplo: php to pdf → file.php.pdf = %PDF-15 <?php system($_GET[’parameter’]); ?>
+
+Isso é um arquivo PDF, com extensão PDF, porém dentro possui um script PHP e através de um nullbyte (%00) é possível remover a extensão e transformar em um PHP
 ## Command Injection
 Essa vulnerabilidade se dá quando é possível injetar comandos do sistema operacional que não deveriam ser possíveis  através de algum campo .
 
 Exemplo de código vulnerável: whois <url> | grep "nserver"
 
 Exemplo de injeção de comando: whois ; id;# | grep "nserver"
+
 
