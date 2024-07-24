@@ -23,9 +23,10 @@ Updating sometimes :)
 
 ---
 ## Useful Material
-- Privilege escalation tool for Windows/Linux/Unix: https://github.com/peass-ng/PEASS-ng <br>
-- BR version for rockyou: https://github.com/DavidFerreiraRocha/rockyoubr <br>
-- Red Team Tools: https://github.com/A-poc/RedTeam-Tools <br>
+- Privilege escalation tool for Windows/Linux/Unix: https://github.com/peass-ng/PEASS-ng
+- BR version for rockyou: https://github.com/DavidFerreiraRocha/rockyoubr
+- Red Team Tools: https://github.com/A-poc/RedTeam-Tools
+- Reverse Shell Generator: https://www.revshells.com/
 ---
 ## Events
 
