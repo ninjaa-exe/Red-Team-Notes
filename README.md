@@ -1,7 +1,7 @@
 # Red-Team-Notes
-My Red Team Notes
+Trying to write down everything I learn
 
-Updating every week :)
+Updating sometimes :)
 
 ## Certifications
 
@@ -21,6 +21,11 @@ Updating every week :)
 [https://cryptohack.org](https://cryptohack.org/) <br>
 [https://www.hacksplaining.com](https://www.hacksplaining.com/) 
 
+---
+## Useful Material
+- Privilege escalation tool for Windows/Linux/Unix: https://github.com/peass-ng/PEASS-ng <br>
+- BR version for rockyou: https://github.com/DavidFerreiraRocha/rockyoubr <br>
+- Red Team Tools: https://github.com/A-poc/RedTeam-Tools <br>
 ---
 ## Events
 
