@@ -1,3 +1,4 @@
+# O que são Hashes?
 Hashes são uma forma de guardar as senhas no banco de dados de forma mais segura, o conceito consiste em aplicar um algoritmo hash na senha registrada pelo usuário, e dessa forma guardar no banco de dados. Outro exemple de uso dos hashes são para a integridade de arquivos, para isso, é aplicado um algoritmo hash em um arquivo e disponibilizado publicamente este hash, caso alguém queira utilizar o programa e verificar se houve alguma alteração nesse programa, basta verificar se o hash é compatível com o seu.
 # Hashes no Windows
 ## Exemplo de Hashes no Windows
