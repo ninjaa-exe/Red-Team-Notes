@@ -38,5 +38,6 @@ Um grande problema com os arquivos é que todos eles são bloqueados em execuç�
 # Hashes no Linux
 # Sites para quebrar hashes
 https://hashes.com/en/decrypt/hash
+
 https://md5decrypt.net/en/
 
