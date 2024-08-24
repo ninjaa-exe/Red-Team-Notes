@@ -2,7 +2,7 @@
 Hashes são uma forma de guardar as senhas no banco de dados de forma mais segura, o conceito consiste em aplicar um algoritmo hash na senha registrada pelo usuário, e dessa forma guardar no banco de dados. Outro exemple de uso dos hashes são para a integridade de arquivos, para isso, é aplicado um algoritmo hash em um arquivo e disponibilizado publicamente este hash, caso alguém queira utilizar o programa e verificar se houve alguma alteração nesse programa, basta verificar se o hash é compatível com o seu.
 # Hashes no Windows
 ## Exemplo de Hashes no Windows
-Na imagem é possível observar exemples de como os hashes são armazenas em sistemas Windows. O Usuário representa o nome da conta, seu ID, sendo 500 sempre para o administrador, o hash LM (Lan Manager), utilizado para sistemas antigos, sendo considerado inseguro e não utilizado na maioria dos casos, e por fim o hash NTLM (NT Lan Manager) que é utilizado para armazenar a senha do usuário 
+Na imagem é possível observar exemples de como os hashes são armazenas em sistemas Windows. O Usuário representa o nome da conta, seu ID, sendo 500 sempre para o administrador, o hash LM (Lan Manager), utilizado para sistemas antigos, sendo considerado inseguro e não utilizado na maioria dos casos, e por fim o hash NTLM (NT Lan Manager) que é utilizado para armazenar a senha do usuário.
 
 
 ![Exemplo de Hashes no Windows](HashesWindowsExample.png)
@@ -39,7 +39,7 @@ Um grande problema com os arquivos é que todos eles são bloqueados em execuç�
 ---
 # Hashes no Linux
 # Sites para quebrar hashes
-https://hashes.com/en/decrypt/hash
+[Quebra de diversos hashes](https://hashes.com/en/decrypt/hash)
 
-https://md5decrypt.net/en/
+[Quebra de MD5](https://md5decrypt.net/en/)
 
