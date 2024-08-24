@@ -3,7 +3,7 @@ Hashes são uma forma de guardar as senhas no banco de dados de forma mais segur
 # Hashes no Windows
 ## Exemplo de Hashes no Windows
 Na imagem é possível observar exemples de como os hashes são armazenas em sistemas Windows. O Usuário representa o nome da conta, seu ID, sendo 500 sempre para o administrador, o hash LM (Lan Manager), utilizado para sistemas antigos, sendo considerado inseguro e não utilizado na maioria dos casos, e por fim o hash NTLM (NT Lan Manager) que é utilizado para armazenar a senha do usuário <br>
-![(HashesWindowsExample.png)]
+![Exemplo de Hashes no Windows](HashesWindowsExample.png)
 *Créditos a Desec Security* 
 ## Arquivos
 As senhas dos usuários no Windows são armazenas em 3 principais arquivos, sendo eles:
