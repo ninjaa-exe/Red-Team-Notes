@@ -31,10 +31,13 @@ Um grande problema com os arquivos é que todos eles são bloqueados em execuç�
 - Fazer uma cópia sombra do volume com a ferramenta "vssadmin" (apenas para versões mais recentes)
 
 ### Ataques
-- Obter os arquivos e usá-los para obter os hashes, para depois descobrir os hashes obtidos
-- Senhas em memória/cache
 - Pass The Hash, uma técnica para utilizar o hash sem precisar quebrá-lo
 - Captura de hashes na rede através da ferramenta "responder"
+
+#### Registro do Windows
+Este é o meio mais utilizado de todos para se obter os hashes de usuários, utilizado tanto em sistemas antigos quanto em sistemas modernos. Através do registro do Windows, é possível consultar os arquivos SAM ou NTDS.DIT e o SYSTEM e criar novos arquivos a partir deles, para isso é utilizado os comandos `reg save hklm\sam samNOVO` e `reg save hklm\system systemNOVO`. Depois de criar os novos arquivos, pode-se baixar estes e utilizar a ferramenta "samdump2", para sistemas antigos, com o comando `samdump2 system sam/ntds.dit` para obter os hashes dos usuários. Em sistemas mais modernos, o "impacket-secretsdump" pode ser utilizado para se descobrir os hashes de usuários, basta utilizar o comando `impacket-secretsdump -sam sam -system system` que ele já fornecerá os hashes.
+#### Senhas em memória/cache
+Para esse tipo de ataque, é necessário baixar os arquivos SAM ou NTDS.DIT e o SYSTEM no diretório C:/Windows/repair, após feito o download desses arquivos, é possível utilizar a ferramenta "samdump2" para obter os hashes de usuários do sistema, o comando ficará o seguinte `samdump2 system sam/ntds.dit`. Um adendo importante em relação a esse ataque é que nem sempre os hashes obtidos estarão atualizados, visto que os arquivos armazenados no diretório são apenas um backup dos verdadeiros.
 
 ---
 # Hashes no Linux
