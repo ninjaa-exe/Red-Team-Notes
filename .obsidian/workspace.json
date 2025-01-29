@@ -11,10 +11,17 @@
             "id": "780dc089581348c9",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "type": "canvas",
+              "state": {
+                "file": "Notes/Pentest/Pentest.canvas",
+                "viewState": {
+                  "x": 613.223070247029,
+                  "y": -406.23850634189034,
+                  "zoom": -2.4320354120811287
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "Pentest"
             }
           }
         ]
@@ -146,16 +153,31 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-git:Open Git source control": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "obsidian-git:Open Git source control": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
   "active": "780dc089581348c9",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "Pentest Phases/Post Exploitation.md",
+    "Pentest Phases/Information Gathering.md",
+    "Pentest Phases/Footprint.md",
+    "Pentest Phases/Exploitation.md",
+    "Vulnerabilities/CVE/CVE-2023-51467.md",
+    "Vulnerabilities/Buffer Overflow/Buffer Overflow.md",
+    "Programming/Assembly.md",
+    "Pentest Phases/Threat Modeling.md",
+    "Pentest Phases/Reporting.md",
+    "Pentest Phases/Privilege Escalation.md",
+    "Pentest Phases/Pre-engagement Interactions.md",
+    "Notes/Pentest/Pentest.canvas",
+    "Notes/Hash/Images/HashesWindowsExample.png",
+    "README.md"
+  ]
 }
