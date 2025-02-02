@@ -15,16 +15,34 @@
               "state": {
                 "file": "Notes/Pentest/Pentest.canvas",
                 "viewState": {
-                  "x": 613.223070247029,
-                  "y": -406.23850634189034,
-                  "zoom": -2.4320354120811287
+                  "x": 78.35506070832633,
+                  "y": 584.2375731488291,
+                  "zoom": -0.7230078811524784
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "Pentest"
+            }
+          },
+          {
+            "id": "4af4960e41ed8f34",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Notes/Pentest/Pentest.canvas",
+                "viewState": {
+                  "x": 4151.282329657042,
+                  "y": -2016.0160406325301,
+                  "zoom": -0.7230078811524784
                 }
               },
               "icon": "lucide-layout-dashboard",
               "title": "Pentest"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -43,7 +61,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -163,21 +182,38 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "780dc089581348c9",
+  "active": "4af4960e41ed8f34",
   "lastOpenFiles": [
-    "Pentest Phases/Post Exploitation.md",
-    "Pentest Phases/Information Gathering.md",
-    "Pentest Phases/Footprint.md",
-    "Pentest Phases/Exploitation.md",
-    "Vulnerabilities/CVE/CVE-2023-51467.md",
-    "Vulnerabilities/Buffer Overflow/Buffer Overflow.md",
-    "Programming/Assembly.md",
-    "Pentest Phases/Threat Modeling.md",
-    "Pentest Phases/Reporting.md",
-    "Pentest Phases/Privilege Escalation.md",
-    "Pentest Phases/Pre-engagement Interactions.md",
+    "Vulnerabilities/Web/Command Injection.md",
     "Notes/Pentest/Pentest.canvas",
+    "Pentest Phases/Exploitation.md",
+    "Untitled.canvas",
+    "Pentest Phases/Footprint.md",
+    "Notes/Hash/Hashes.md",
     "Notes/Hash/Images/HashesWindowsExample.png",
-    "README.md"
+    "Notes/Pentest/Images/Proxychains/proxydns.png",
+    "Notes/Pentest/Images/Proxychains/proxylist.png",
+    "Pentest Phases/Post Exploitation.md",
+    "Pentest Phases/Privilege Escalation.md",
+    "Pentest Phases/Reporting.md",
+    "Pentest Phases/Threat Modeling.md",
+    "Pentest Phases/Vulnerability Analysis.md",
+    "Programming/SQL.md",
+    "Programming/Shell.md",
+    "Programming/Python.md",
+    "Programming/Powershell.md",
+    "Programming/C.md",
+    "Programming/Bash.md",
+    "Programming/Assembly.md",
+    "Vulnerabilities/README.md",
+    "README.md",
+    "Vulnerabilities/Web/Method Bypass.md",
+    "Vulnerabilities/Web/PHP Wrappers.md",
+    "Vulnerabilities/Web/Source Code Analysis.md",
+    "Vulnerabilities/Web/SQL Injection (SQLI).md",
+    "Vulnerabilities/Web/Upload Bypass.md",
+    "Vulnerabilities/Web/Local File Inclusion (LFI) and Remote File Inclusion (RFI).md",
+    "Vulnerabilities/Web/Open Redirects.md",
+    "Vulnerabilities/Web/Cross Site Scripting (XSS).md"
   ]
 }
