@@ -15,34 +15,16 @@
               "state": {
                 "file": "Notes/Pentest/Pentest.canvas",
                 "viewState": {
-                  "x": 78.35506070832633,
-                  "y": 584.2375731488291,
-                  "zoom": -0.7230078811524784
-                }
-              },
-              "icon": "lucide-layout-dashboard",
-              "title": "Pentest"
-            }
-          },
-          {
-            "id": "4af4960e41ed8f34",
-            "type": "leaf",
-            "state": {
-              "type": "canvas",
-              "state": {
-                "file": "Notes/Pentest/Pentest.canvas",
-                "viewState": {
-                  "x": 4151.282329657042,
-                  "y": -2016.0160406325301,
-                  "zoom": -0.7230078811524784
+                  "x": 280.8997289215779,
+                  "y": 179.68326130095568,
+                  "zoom": -1.1230078811524784
                 }
               },
               "icon": "lucide-layout-dashboard",
               "title": "Pentest"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -182,7 +164,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "4af4960e41ed8f34",
+  "active": "780dc089581348c9",
   "lastOpenFiles": [
     "Vulnerabilities/Web/Command Injection.md",
     "Notes/Pentest/Pentest.canvas",
