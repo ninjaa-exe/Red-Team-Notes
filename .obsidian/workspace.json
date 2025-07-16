@@ -11,17 +11,14 @@
             "id": "780dc089581348c9",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Notes/Pentest/Pentest.canvas",
-                "viewState": {
-                  "x": -3724.7688908087384,
-                  "y": 1576.1409360038815,
-                  "zoom": -4
-                }
+                "file": "Tools/Hydra.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "Pentest"
+              "icon": "lucide-file",
+              "title": "Hydra"
             }
           }
         ]
@@ -81,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "9e2ba357621fc057",
@@ -167,34 +163,38 @@
   },
   "active": "780dc089581348c9",
   "lastOpenFiles": [
-    "Programming/Assembly.md",
-    "Pentest Phases/Exploitation.md",
-    "Tools/Burpsuite.md",
-    "Vulnerabilities/Web/Upload Bypass.md",
-    "Vulnerabilities/Web/Subdomain Takeover.md",
-    "README.md",
-    "Vulnerabilities/CVE/CVE-2023-51467.md",
-    "Notes/Pentest/Pentest.canvas",
-    "Tools/WPScan.md",
-    "Tools/Wireshark.md",
-    "Tools/SQL Map.md",
-    "Tools/Responder.md",
-    "Tools/Nmap.md",
-    "Tools/Metasploit.md",
+    "Notes/Brute Force/Brute Force.md",
     "Tools/Hydra.md",
+    "Notes/Hash/Hash.md",
+    "Notes/Escalação de Privilégio/Escalação de Privilégio.md",
     "Tools/John The Ripper.md",
-    "Tools/Impacket-secretsdump.md",
-    "Tools/Gobuster.md",
-    "Tools/Gdb.md",
-    "Tools/Curl.md",
-    "Tools/Crackmapexec.md",
-    "Tools/Commix.md",
-    "Programming/SQL.md",
-    "Programming/Shell.md",
-    "Programming/Python.md",
-    "Programming/Powershell.md",
-    "Programming/C.md",
+    "Notes/Hash/Images/HashesShadow.png",
+    "Notes/Brute Force",
+    "README.md",
+    "Pentest Phases/Footprint.md",
+    "Pentest Phases/Exploitation.md",
+    "Notes/OSINT/Information Gathering.md",
+    "Notes/Pentest/Pentest.canvas",
+    "Notes/OSINT",
+    "Pentest Phases/Post Exploitation.md",
+    "Pentest Phases/Pre-engagement Interactions.md",
+    "Pentest Phases/Reporting.md",
+    "Pentest Phases/Threat Modeling.md",
+    "Pentest Phases/Vulnerability Analysis.md",
+    "Notes/Escalação de Privilégio",
     "Notes/Hash/Images/HashesWindowsExample.png",
+    "Programming/Assembly.md",
+    "Programming/Bash.md",
+    "Programming/C.md",
+    "Programming/Powershell.md",
+    "Programming/Python.md",
+    "Programming/Shell.md",
+    "Programming/SQL.md",
+    "Tools/Wireshark.md",
+    "Tools/Wafw00f.md",
+    "Tools/TCPDump.md",
+    "Tools/Searcsploit.md",
+    "Tools/Samdump2.md",
     "Notes/Pentest/Images/Proxychains/proxylist.png",
     "Notes/Pentest/Images/Proxychains/proxydns.png",
     "Untitled.canvas"

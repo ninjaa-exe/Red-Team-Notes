@@ -1,5 +1,21 @@
 # O que são Hashes?
 Hashes são uma forma de guardar as senhas no banco de dados de forma mais segura, o conceito consiste em aplicar um algoritmo hash na senha registrada pelo usuário, e dessa forma guardar no banco de dados. Outro exemple de uso dos hashes são para a integridade de arquivos, para isso, é aplicado um algoritmo hash em um arquivo e disponibilizado publicamente este hash, caso alguém queira utilizar o programa e verificar se houve alguma alteração nesse programa, basta verificar se o hash é compatível com o seu.
+
+# One Way x Two Way
+Funções Hash One Way são formas de criptografia em que são é apenas aplicável o hash sem uma forma de reverter, por exemplo é possível criptografar um texto em sha256, porém não tem como descriptografar de forma simples. Funções Hash Two Way, como o base64, podem tanto ser utilizados para criptografar, como descriptografar de forma simples.
+
+# Como identificar o Hash
+
+- hashid
+- hashcat
+- [Identificação de Hash](https://hashes.com/en/tools/hash_identifier)
+# Formas para quebrar hashes
+
+- John The Ripper
+- [Quebra de diversos hashes](https://hashes.com/en/decrypt/hash)
+- [Quebra de MD5](https://md5decrypt.net/en/)
+
+---
 # Hashes no Windows
 ## Exemplo de Hashes no Windows
 Na imagem é possível observar exemples de como os hashes são armazenas em sistemas Windows. O Usuário representa o nome da conta, seu ID, sendo 500 sempre para o administrador, o hash LM (Lan Manager), utilizado para sistemas antigos, sendo considerado inseguro e não utilizado na maioria dos casos, e por fim o hash NTLM (NT Lan Manager) que é utilizado para armazenar a senha do usuário.
@@ -41,8 +57,25 @@ Para esse tipo de ataque, é necessário baixar os arquivos SAM ou NTDS.DIT e o 
 
 ---
 # Hashes no Linux
-# Sites para quebrar hashes
-[Quebra de diversos hashes](https://hashes.com/en/decrypt/hash)
+## /etc/passwd
+Nas primeiras versões de linux, as senhas ficavam armazenadas no arquivo /etc/passwd, porém hoje em dia ele é utilizado apenas para manter informações de usuários
 
-[Quebra de MD5](https://md5decrypt.net/en/)
+## /etc/shadow
+Hoje em dia, este é o arquivo em que fica armazenado os hashes de senha dos usuários do sistema, onde apenas o root possui acesso a este arquivo
 
+![Exemplo de Hashes do arquivo Shadow](HashesShadow.png)
+
+## Formato Hash do arquivo shadow
+Os hashes do linux são dividos em 3 partes, `$id$salt$hashed$`, onde o ID representa o método de encriptação, o salt representa um valor aleatório para melhorar a encriptação, e o hashed o hash encriptado
+
+### ID
+1 - MD5
+2 - Blowfish
+5 - SHA-256
+6 - SHA-512
+y - yescrypt
+
+## John e Unshadow
+O unshadow é uma ferramenta em conjunto com o John onde você pode passar o arquivo /etc/passwd e depois o arquivo /etc/shadow para formatar no padrão do John
+
+Exemplo: `unshadow passwd shadow > hashes` -> `john hashes`
