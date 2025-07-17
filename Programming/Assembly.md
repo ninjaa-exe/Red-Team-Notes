@@ -1,3 +1,11 @@
+# Syntax Intel vs AT&T
+
+![Diferença de Syntax](Syntax.png)
+
+# Instruções
+
+![Instruções](Instrucoes.png)
+
 # Windows
 
 ## Instruções
@@ -5,6 +13,7 @@ Os comandos devem ser enviado a stack pelo push de forma invertida e com 00 no f
 Exemplo: cmd.exe → 00exe.cmd, em hex 63 6D 64 2E 65 78 65 → 00657865 2E646D63
 
 ---
+
 Sempre verificar os parâmetros da função e enviar ao contrário os argumentos
 
 ---
