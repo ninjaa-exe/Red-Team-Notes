@@ -44,8 +44,8 @@ _main: ;Define a main
 	call ebx
 ```
 ### Compilando
-- nasm -f win32 file.asm
-- golink /entry _ main file.obj msvcrt.dll
+- `nasm -f win32 file.asm`
+- `golink /entry _main file.obj msvcrt.dll`
 ---
 ### Caixa de texto
 ```nasm
@@ -65,8 +65,8 @@ _main:
 	call _MessageBoxA
 ```
 ### Compilando
-- nasm -f win32 file.asm
-- golink /entry _ main file.obj User32.dll /mix
+- `nasm -f win32 file.asm`
+- `golink /entry _main file.obj User32.dll /mix`
 ---
 ### Execução de comandos no cmd
 ```nasm
@@ -89,8 +89,8 @@ _main:
 	call _ShellExecuteA
 ```
 ### Compilando
-- nasm -f win32 file.asm
-- golink /entry _ main file.obj Shell32.dll /mix
+- `nasm -f win32 file.asm`
+- `golink /entry _main file.obj Shell32.dll /mix`
 ---
 ### Download por cmd
 ```nasm
@@ -116,18 +116,24 @@ _main:
 - Diretório temporário do Windows -> c:\windows\temp\
 
 ### Compilando
-- nasm -f win32 file.asm
-- golink /console /entry _ main file.obj User32.dll /mix
+- `nasm -f win32 file.asm`
+- `golink /console /entry _main file.obj User32.dll /mix`
 ---
 # Linux
 ## Instruções
 
 Como compilar em x86: 
-``nasm -f elf32 <file.asm> ld --entry main <file.o> -m elf_i386 -o <output file>``
+``nasm -f elf32 <file.asm>``
+
+Como linkar em x86:
+`ld --entry _main <file.o> -m elf_i386 -o <output file>`
 
 ---
 Como compilar em x64: 
-``nasm -f elf64 <file.asm> ld --entry _main <file.o> -o <output file>``
+``nasm -f elf64 <file.asm>
+
+Como linkar em x64:
+`ld --entry _main <file.o> -o <output file>```
 
 ---
 ## Sites Úteis
@@ -145,19 +151,19 @@ Como compilar em x64:
 global _main
 
 section  .data
-	<text>: db '<text>'0xa
+	<text>: db '<text>',0xa
 
 section .text
 _main:
 	mov eax, 4
 	mov ebx, 1; STDIN0, STDOUT1, STDERR2
 	mov ecx, <text>
-	mov edx, <size>
+	mov edx, <text size>
 	int 0x80
 
 	mov eax, 1
 	mov ebx, 0
-int 0x80
+	int 0x80
 ```
 ---
 ### Texto no bash x64
