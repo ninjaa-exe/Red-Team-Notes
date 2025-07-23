@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Programming/Assembly.md",
+                "file": "Vulnerabilities/Buffer Overflow/Buffer Overflow.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Assembly"
+              "title": "Buffer Overflow"
             }
           }
         ]
@@ -163,8 +163,9 @@
   },
   "active": "780dc089581348c9",
   "lastOpenFiles": [
-    "Notes/Arquitetura de Computadores/Arquitetura de Computadores.md",
     "Programming/Assembly.md",
+    "Vulnerabilities/Buffer Overflow/Buffer Overflow.md",
+    "Notes/Arquitetura de Computadores/Arquitetura de Computadores.md",
     "Programming/Images/Syntax.png",
     "Programming/Images/Instrucoes.png",
     "Notes/Escalação de Privilégio/Escalação de Privilégio.md",
