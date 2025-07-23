@@ -149,3 +149,9 @@ s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect(("192.168.0.5",80))
 s.send(request)
 ```
+
+# DEP - Data Execution Prevention
+Também conhecido como non-execute (NX), tem como objetivo prevenir a execução de de códigos em memória
+
+# ASLR - Address Space Layout Randomization
+A ideia por trás do ASLR é tornar os endereços de memória aleatórios dificultando que o atacante consiga um endereço fixo durante a exploração
