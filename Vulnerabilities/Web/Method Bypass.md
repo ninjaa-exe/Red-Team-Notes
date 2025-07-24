@@ -1,3 +1,7 @@
-You can view the contents of a page that requires administrative access by using another method to access it. 
+Você pode acessar conteúdo de uma página que requer acesso administrativo utilizando outro método para acessar
 
-Example: Make a POST request via curl to the specified page 
+Exemplo: Usar um POST via curl para uma página específica que com o GET não seria possível
+
+```bash
+curl -v -X POST http://172.16.1.10/logs/
+```

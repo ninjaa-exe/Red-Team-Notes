@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Vulnerabilities/Buffer Overflow/Buffer Overflow.md",
+                "file": "Vulnerabilities/Web/Method Bypass.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Buffer Overflow"
+              "title": "Method Bypass"
             }
           }
         ]
@@ -163,8 +163,19 @@
   },
   "active": "780dc089581348c9",
   "lastOpenFiles": [
-    "Notes/Arquitetura de Computadores/Arquitetura de Computadores.md",
+    "Vulnerabilities/Web/WEBDAV - Put Exploration.md",
+    "Vulnerabilities/Web/Method Bypass.md",
+    "Vulnerabilities/Web/PHP Wrappers.md",
+    "Vulnerabilities/Web/README.md",
+    "Vulnerabilities/Web/Open Redirects.md",
+    "Vulnerabilities/Web/Local File Inclusion (LFI) and Remote File Inclusion (RFI).md",
+    "Vulnerabilities/Web/File and Directory Bruteforce.md",
+    "Vulnerabilities/Web/Cross Site Scripting (XSS).md",
+    "Vulnerabilities/Web/Command Injection.md",
+    "Notes/OSINT/Information Gathering.md",
+    "Tools/Hydra.md",
     "Vulnerabilities/Buffer Overflow/Buffer Overflow.md",
+    "Notes/Arquitetura de Computadores/Arquitetura de Computadores.md",
     "Notes/Pentest/Pentest.canvas",
     "Programming/Assembly.md",
     "Programming/Images/Syntax.png",
@@ -183,20 +194,10 @@
     "Vulnerabilities/Web/Subdomain Takeover.md",
     "Vulnerabilities/Web/SQL Injection (SQLI).md",
     "Vulnerabilities/Web/Source Code Analysis.md",
-    "Vulnerabilities/Web/README.md",
-    "Vulnerabilities/Web/PHP Wrappers.md",
-    "Vulnerabilities/Web/Open Redirects.md",
-    "Vulnerabilities/Web/Method Bypass.md",
-    "Vulnerabilities/Web/Local File Inclusion (LFI) and Remote File Inclusion (RFI).md",
-    "Vulnerabilities/Web/File and Directory Bruteforce.md",
-    "Vulnerabilities/Web/Cross Site Scripting (XSS).md",
-    "Vulnerabilities/Web/Command Injection.md",
     "Programming/Powershell.md",
     "Programming/C.md",
     "Programming/Bash.md",
-    "Tools/Hydra.md",
     "Notes/Brute Force/Brute Force.md",
-    "Tools/John The Ripper.md",
     "Notes/Hash/Images/HashesShadow.png",
     "Notes/Brute Force",
     "Notes/OSINT",
