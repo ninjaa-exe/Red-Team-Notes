@@ -1,3 +1,4 @@
-In cases where the redirect is done by the GET parameter and is capable of changing the URL, the hacker can change the link to a malicious website or whatever he wants. Sometimes the redirect parameter is base64, MD5, etc., but this can also be circumvented by finding out the encoding and putting the encoded link in the parameter 
+Em alguns casos onde o redirecionamento é feito pelo parâmetro GET, o atacante pode mudar o link para um site malicioso ou o que ele quiser. Algumas vezes, o redirecionamento é feito em base64, MD5 ou alguma outra codificação, mas isso também pode ser burlado encontrando a forma de codificação e colocando o link codificado no parâmetro
 
-Example:
+Exemplo: http://172.16.1.10/turismo/redir.php?url=malicious_site.com
+Exemplo: http://172.16.1.10/turismo/redir.php?url=http://172.16.1.5/virus.exe
