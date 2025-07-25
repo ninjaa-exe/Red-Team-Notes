@@ -1,0 +1,1 @@
+Você pode passar um contrabarra nos campos de login e senha para verificar como está sendo passado os dados pelo banco de dados, se possui algum tratamento ou não, depois, para tentarmos logar na aplicação, podemos utilizar payloads como `OR 1=1;#`

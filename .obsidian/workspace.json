@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Vulnerabilities/Web/Open Redirects.md",
+                "file": "Vulnerabilities/Web/Local File Inclusion (LFI) and Remote File Inclusion (RFI).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Open Redirects"
+              "title": "Local File Inclusion (LFI) and Remote File Inclusion (RFI)"
             }
           }
         ]
@@ -163,11 +163,12 @@
   },
   "active": "780dc089581348c9",
   "lastOpenFiles": [
+    "Vulnerabilities/Web/Bypass Authentication - SQL Injection.md",
+    "Vulnerabilities/Web/Open Redirects.md",
     "Vulnerabilities/Web/Method Bypass.md",
     "Vulnerabilities/Web/WEBDAV - Put Exploration.md",
     "Vulnerabilities/Web/PHP Wrappers.md",
     "Vulnerabilities/Web/README.md",
-    "Vulnerabilities/Web/Open Redirects.md",
     "Vulnerabilities/Web/Local File Inclusion (LFI) and Remote File Inclusion (RFI).md",
     "Vulnerabilities/Web/File and Directory Bruteforce.md",
     "Vulnerabilities/Web/Cross Site Scripting (XSS).md",
@@ -197,7 +198,6 @@
     "Programming/Powershell.md",
     "Programming/C.md",
     "Programming/Bash.md",
-    "Notes/Brute Force/Brute Force.md",
     "Notes/Hash/Images/HashesShadow.png",
     "Notes/Brute Force",
     "Notes/OSINT",

