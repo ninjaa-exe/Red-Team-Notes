@@ -1,5 +1,5 @@
-This vulnerability occurs when it is possible to inject commands from the operating system that should not be possible through some field. 
+Esta vulnerabilidade ocorre quando é possível injetar comandos do sistema operacional que não deveriam ser possíveis por meio de algum campo
 
-Vulnerable code example: whois url  | grep "nserver" 
+Exemplo de código vulnerável: whois url  | grep "nserver" 
 
-Example of command injection: whois ; id;# | grep "nserver"
+Exemplo de injeção de comando: whois ; id;# | grep "nserver"
