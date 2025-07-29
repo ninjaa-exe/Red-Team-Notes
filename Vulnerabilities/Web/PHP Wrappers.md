@@ -1,8 +1,9 @@
-In PHP, "wrappers" are mechanisms that allow you to access different types of resources using the same interface. They function as middle layers that encapsulate specific resources, such as files, URLs, dataflows, etc., and provide a consistent way to interact with those resources, regardless of the underlying type.
+Em PHP, "wrappers" são mecanismos que permitem acessar diferentes tipos de recursos usando a mesma interface. Eles funcionam como camadas intermediárias que encapsulam recursos específicos, como arquivos, URLs, fluxos de dados, etc., e fornecem uma maneira consistente de interagir com esses recursos, independentemente do tipo subjacente.
 
-For example, PHP provides wrappers for accessing local files (e.g., `file://`), remote resources (e.g., `http://` and `ftp://`), as well as other communication protocols. Using these wrappers, you can manipulate local files and remote resources in the same way, using functions such as `file_get_contents()` and `file_put_contents()`, for example.
+Por exemplo, o PHP fornece wrappers para acessar arquivos locais (por exemplo, `file://`), recursos remotos (por exemplo, `http://` e `ftp://`), bem como outros protocolos de comunicação. Usando esses wrappers, você pode manipular arquivos locais e recursos remotos da mesma forma, usando funções como `file_get_contents()` e `file_put_contents()`, por exemplo
 
-# Table of Contents
+Exemplo: http://rh.businesscorp.com.br/index.php?page=data://text/plan;base64,PD9waHAgc3lzdGVtKGlkKTs/Pg== (<?php system(id);?> em base64)
+# Tabela de Wrappers
 
 | Wrapper   | Function                        |
 | --------- | ------------------------------- |
@@ -19,4 +20,4 @@ For example, PHP provides wrappers for accessing local files (e.g., `file://`), 
 | ogg://    | Audio streams                   |
 | expect:// | Process Interaction Streams     |
 
-More informations: https://www.php.net/manual/en/wrappers.php
+Mais informações: https://www.php.net/manual/en/wrappers.php
