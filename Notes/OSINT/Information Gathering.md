@@ -1,5 +1,5 @@
-# Business
-## Sites to OSINT
+## Business
+### Sites to OSINT
 - https://hunter.io
 - https://haveibeenpwned.com
 - https://pastebin.com
