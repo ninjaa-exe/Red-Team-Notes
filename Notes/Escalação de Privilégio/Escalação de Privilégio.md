@@ -131,15 +131,15 @@ where /R directory file → busca um arquivo no sistema
 
 findsrt /s “string” * → busca por uma string no sistema
 
-### Automatico
+### Automatizado
 
-para ver informações do sistema
+#### Informações do sistema
 
-[https://github.com/peass-ng/PEASS-ng/tree/master/winPEAS](https://github.com/peass-ng/PEASS-ng/tree/master/winPEAS)
+[Windows Privilege Escalation Awesome Scripts](https://github.com/peass-ng/PEASS-ng/tree/master/winPEAS)
 
-para ver possiveis vulnerabilidades conforme o sistema operacional
+#### Vulnerabilidades do sistema operacional
 
-[https://github.com/bitsadmin/wesng](https://github.com/bitsadmin/wesng)
+[Windows Exploit Suggester](https://github.com/bitsadmin/wesng)
 
 python [wes.py](http://wes.py) --update → para atualizar
 
@@ -147,9 +147,7 @@ systeminfo > systeminfo.txt → precisa no alvo
 
 python [wes.py](http://wes.py) systeminfo file
 
-## Bypass UAC
-
-
+### Bypass UAC
 
 ### SysinternalsSuite
 
@@ -203,7 +201,7 @@ netstat -nlpt → mostra portas abertas
 
 ps aux → mostra os processos em execução
 
-### Automatico
+### Automatizado
 
 para ver informações do sistema
 
@@ -213,15 +211,7 @@ para ver informações do sistema
 
 para ver possiveis vulnerabilidades
 
-[https://github.com/The-Z-Labs/linux-exploit-suggester](https://github.com/The-Z-Labs/linux-exploit-suggester)
-
-#### Sudo
-
-através de programas que rodam como sudo, da para escalar os privilégios
-
-sudo -l → mostra programas que rodam como sudo
-
-vim example: sudo vim -c ‘!bash’
+[Linux Exploit Suggester](https://github.com/The-Z-Labs/linux-exploit-suggester)
 
 #### Cron
 
@@ -231,40 +221,40 @@ find / -type f - perm 777 2>/dev/null → encontra arquivos com permissões máx
 
 ## Vertical Escalation x Horizontal Escalation
 
-## Sudo Rights
-### What is sudo?
+### Sudo Rights
+#### What is sudo?
 Utilitário Unix like que permite a elevação de privilégios (means Super User do), you can use `sudo -l` to see which commands your user have permission with sudo
-### Where is configurated?
+#### Where is configurated?
 In /etc/sudoers
-### How the file works?
+#### How the file works?
 User Host=(User or group) Command
 
-## Suid Bit Misconfiguration
-### What is SUID?
+### Suid Bit Misconfiguration
+#### What is SUID?
 Special permission that possibilities user executes a file with the owner privileges, if the binary have SUID (Set User ID)
 
-### How identify the binaries with SUID?
+#### How identify the binaries with SUID?
 find / -perm -u=s 2>/dev/null
 find / -perm -4000 2>/dev/null
 
-### How to validate a binary?
+#### How to validate a binary?
 https://gtfobins.github.io
 
-## Path Bad Configuration
-### What is a variable?
+### Path Bad Configuration
+#### What is a variable?
 Memory address that can store data
 
-### $PATH
+#### $PATH
 At linux, $PATH it's a environment variable that informs SO where 
 
-### How validate $PATH?
+#### How validate $PATH?
 echo $PATH
 
-## Kernel Exploits
-### What is the kernel?
+### Kernel Exploits
+#### What is the kernel?
 Kernel is the responsable to intermediate between hardware and software, doing the low level tasks,
 
-### How to abuse?
+#### How to abuse?
 Buffer Overflow, vulnerable libraries, UID changes in public exploits. To validate the kernel informations you can use `uname -a`, but remember, kernel exploit should be the last option to use when escalation the privilege
 
 
