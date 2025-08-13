@@ -147,15 +147,15 @@ systeminfo > systeminfo.txt → precisa no alvo
 
 python [wes.py](http://wes.py) systeminfo file
 
-### Bypass UAC
+### Bypass User Account Control (UAC)
 
-### SysinternalsSuite
+#### SysinternalsSuite
 
 Procmon → Monitora processos
 
 Sigcheck → Ver informações do manifest
 
-sigcheck -a -m directory/file.xe
+Sigcheck -a -m directory/file.exe
 
 asInvoker → mesmo nível de permissão que o usuário
 
@@ -163,7 +163,7 @@ highestAvailable → tenta trazer o nível mais alto que conseguir
 
 requireAdministrator → precisa estar em administrator para executar
 
-### WMIC
+#### WMIC
 
 wmic service → mostra todos os serviços
 
